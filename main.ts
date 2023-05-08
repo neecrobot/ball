@@ -11,14 +11,14 @@ basic.forever(function () {
         led.unplot(MX, MY)
         GX = input.acceleration(Dimension.X)
         GY = input.acceleration(Dimension.Y)
-        if (0 < GX && MX < 4) {
+        if (100 < GX && MX < 4) {
             MX += 1
-        } else if (GX < 0 && 0 < MX) {
+        } else if (GX < -100 && 0 < MX) {
             MX += -1
         }
-        if (0 < GY && MY < 4) {
+        if (100 < GY && MY < 4) {
             MY += 1
-        } else if (GY < 0 && 0 < MY) {
+        } else if (GY < -100 && 0 < MY) {
             MY += -1
         }
         basic.pause(100)
